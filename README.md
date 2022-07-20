@@ -1,2 +1,2 @@
-# badbank
+# BadBank
 Front end banking assignment
