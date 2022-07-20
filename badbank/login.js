@@ -19,6 +19,7 @@ function Login(){
         if (!validate(email,    'email'))      return;
         if (!validate(password, 'password'))   return;
         ctx.users.push({email,password,balance:100});
+        UpdateData(email, password);
         setShow(false);
     }
 
@@ -32,6 +33,7 @@ function Login(){
         <Card
             bgcolor="secondary"
             header="Login"
+            cardWidth='30%'
             status={status}
             body={show ? (
                 <>

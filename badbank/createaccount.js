@@ -21,6 +21,7 @@ function CreateAccount(){
         if (!validate(email,   'email'))       return;
         if (!validate(password,   'password')) return;
         ctx.users.push({name,email,password,balance:100});
+        UpdateData(name, email, password);
         setShow(false);
     }
 
@@ -35,6 +36,7 @@ function CreateAccount(){
         <Card
             bgcolor="primary"
             header="Create Account"
+            cardWidth='30%'
             status={status}
             body={show ? (
                 <>
