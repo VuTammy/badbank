@@ -3,6 +3,7 @@ function AllData() {
   const ctx = React.useContext(UserContext);
 
   function CreateData() {
+    console.log("we are in boyos");
     var table = document.getElementById("table");
     for (let i = 0; i < createName.length; i++) {
       var row = table.insertRow(1);
@@ -13,7 +14,8 @@ function AllData() {
       emailData.innerHTML = createEmail[i];
       passwordData.innerHTML = createPassword[i];
     }
-    setShow(true);
+
+    document.getElementById("button-id").hidden = true;;
   }
 
   return (
@@ -33,13 +35,11 @@ function AllData() {
                   <th scope="col">Password</th>
                 </tr>
               </thead>
-              <tbody>
-            
-              </tbody>
-              <button type="submit" className="btn btn-danger" onClick={CreateData}>Show Data</button>
+              <tbody></tbody>
             </table>
+            <button type="submit" id="button-id" className="btn btn-danger" onClick={CreateData}>Show Secure Data</button>
           </>
-        ) : (
+        ):(
           <></>
         )
       }

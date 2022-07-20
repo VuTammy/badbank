@@ -35,22 +35,27 @@ function Withdraw(){
 
     return(
         <Card
-            bgcolor="info"
+            bgcolor="light"
+            txtcolor="Black"
             header="Withdraw"
             cardWidth='30%'
             status={status}
             body={show ? (
                 <>
-                Balance : ${balance} <br/>
+                <em><b>Balance : ${balance}</b></em> <br/>
+                <br/>
                 Withdraw Amount<br/>
+                <br/>
                 <input type="number" className="form-control" id="amount" placeholder="Withdraw Amount" value={amount} onChange={e => setAmount(e.currentTarget.value)}/><br/>
-                <button type="submit" className="btn btn-light" onClick={handleCreate}>Withdraw</button>
+                <button type="submit" className="btn btn-danger" onClick={handleCreate}>Withdraw</button>
                 </>
             ):(
                 <>
                 <h5>Withdrawal successful<br/>
-                Balance : ${balance}</h5>
-                <button type="submit" className="btn btn-light" onClick={clearForm}>Withdraw more money</button>
+                <br/>
+                <em><b>Balance : ${balance}</b></em> </h5>
+                <br/>
+                <button type="submit" className="btn btn-danger" onClick={clearForm}>Add Another Withdrawal</button>
                 </>
             )}
         />

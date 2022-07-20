@@ -31,7 +31,8 @@ function Login(){
 
     return(
         <Card
-            bgcolor="secondary"
+            bgcolor="light"
+            txtcolor="Black"
             header="Login"
             cardWidth='30%'
             status={status}
@@ -41,12 +42,12 @@ function Login(){
                 <input type="input" className="form-control" id="email" placeholder="Enter email" value={email} onChange={e => setEmail(e.currentTarget.value)}/><br/>
                 Password<br/>
                 <input type="input" className="form-control" id="password" placeholder="Enter password" value={password} onChange={e => setPassword(e.currentTarget.value)}/><br/>
-                <button type="submit" className="btn btn-light" onClick={handleCreate}>Login</button>
+                <button type="submit" className="btn btn-danger" onClick={handleCreate}>Login</button>
                 </>
             ):(
                 <>
                 <h5>Welcome back! Use the Navigation bar to get started.</h5>
-                <button type="submit" className="btn btn-light" onClick={clearForm}>Log Out</button>
+                <button type="submit" className="btn btn-danger" onClick={clearForm}>Log Out</button>
                 </>
             )}
         />
