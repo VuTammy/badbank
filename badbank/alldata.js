@@ -15,7 +15,7 @@ function AllData() {
       passwordData.innerHTML = createPassword[i];
     }
 
-    document.getElementById("button-id").hidden = true;;
+    document.getElementById("button-id").hidden = true;
   }
 
   return (
